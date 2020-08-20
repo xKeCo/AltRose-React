@@ -1,0 +1,73 @@
+:root {
+  --dark: #14171d;
+}
+
+.vh-80 {
+  height: 80vh;
+}
+
+.hero-container {
+  height: 600px;
+}
+
+.hero-background {
+  background-color: var(--dark);
+  position: absolute;
+  width: 0;
+  height: 600px;
+  transition: 1s ease-in-out;
+}
+
+.hero-img {
+  width: 100%;
+  max-width: 450px;
+  z-index: 1000;
+  transition: 2s ease-in-out;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  min-height: 600px;
+  align-items: center;
+}
+.hero-text {
+  transition: 1s ease-in-out;
+}
+
+.btn {
+  padding: 0.45rem 1.65rem;
+  background-color: red;
+  border-color: red;
+}
+
+.btn:hover {
+  background-color: #b21b1e;
+  border-color: #b21b1e;
+}
+
+@media (max-width: 1024px) {
+  .display-1 {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-content {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    text-align: center;
+  }
+  .hero-container {
+    height: unset;
+  }
+  .hero-background {
+    height: 100%;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .btn {
+    width: 100%;
+  }
+}
