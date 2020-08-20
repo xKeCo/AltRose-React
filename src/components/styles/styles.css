@@ -5,3 +5,7 @@
 .nav-item:active {
   border: none;
 }
+
+.nav-item:hover {
+  color: #b21b1e;
+}
