@@ -2,8 +2,6 @@
   min-height: 50px;
 }
 
-.nav-item:hover {
-  width: 0px;
-  height: 0px;
-  outline: 0px;
+.nav-item:active {
+  border: none;
 }
