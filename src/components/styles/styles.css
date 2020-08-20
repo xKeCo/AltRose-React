@@ -1,11 +1,3 @@
 .navbar {
   min-height: 50px;
 }
-
-.nav-item:active {
-  border: none;
-}
-
-.nav-item:hover {
-  color: #b21b1e;
-}
