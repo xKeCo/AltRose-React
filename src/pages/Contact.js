@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./styles/PageNotFound.css";
 
-const Contact = () => {
+export default function Contact() {
   return (
     <React.Fragment>
       <section className="Container_not-Found">
@@ -18,6 +18,4 @@ const Contact = () => {
       </section>
     </React.Fragment>
   );
-};
-
-export default Contact;
+}

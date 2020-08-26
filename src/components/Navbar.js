@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.css";
 import "./styles/styles.css";
 
-const Navbar = () => {
+export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg bg-dark">
       <div className="container">
@@ -44,11 +44,14 @@ const Navbar = () => {
                 Contact
               </Link>
             </li>
+            <li className="nav-item mr-3 ">
+              <Link to="/Login" className="nav-link  text-light" href="#">
+                Login
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   );
-};
-
-export default Navbar;
+}

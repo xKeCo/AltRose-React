@@ -3,7 +3,7 @@ import React from "react";
 import "./styles/Home.css";
 import "bootstrap/dist/css/bootstrap.css";
 
-const Home = () => {
+export default function Home() {
   return (
     <React.Fragment>
       <section className="hero-container position-relative text-light">
@@ -29,6 +29,4 @@ const Home = () => {
       </section>
     </React.Fragment>
   );
-};
-
-export default Home;
+}
