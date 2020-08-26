@@ -12,33 +12,33 @@
 
 .hero-background {
   background-color: var(--dark);
-  position: absolute;
-  width: 0;
   height: 600px;
+  position: absolute;
   transition: 1s ease-in-out;
+  width: 0;
 }
 
 .hero-img {
-  width: 100%;
   max-width: 450px;
-  z-index: 1000;
   transition: 2s ease-in-out;
+  width: 100%;
+  z-index: 1000;
 }
 
 .img-container {
+  align-items: center;
   display: flex;
   justify-content: center;
   min-height: 600px;
-  align-items: center;
 }
 .hero-text {
   transition: 1s ease-in-out;
 }
 
 .btn {
-  padding: 0.45rem 1.65rem;
   background-color: red;
   border-color: red;
+  padding: 0.45rem 1.65rem;
 }
 
 .btn:hover {

@@ -3,11 +3,11 @@ import "./styles/Login.css";
 import "bootstrap/dist/css/bootstrap.css";
 import GithubButton from "../components/buttons/GithubButton";
 import GithubIcon from "../components/buttons/icons/GithubIcon";
-
 import { loginWithGithub, onAuthStateChanged } from "../firebase/client";
+import Avatar from "../components/Avatar";
 
 export default function Login() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(undefined);
 
   useEffect(() => {
     onAuthStateChanged(setUser);
@@ -15,11 +15,7 @@ export default function Login() {
 
   const handleClick = () => {
     loginWithGithub()
-      .then((user) => {
-        const { avatar, username, url } = user;
-        setUser(user);
-        console.log(user);
-      })
+      .then(setUser)
       .catch((err) => {
         console.log(err);
       });
@@ -62,8 +58,7 @@ export default function Login() {
 
             {user && user.avatar && (
               <div>
-                <img src={user.avatar} alt="Avatar" width="70" height="70" />
-                <strong>{user.username}</strong>
+                <Avatar src={user.avatar} alt={user.username} text={user.username} />
               </div>
             )}
           </div>

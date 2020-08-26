@@ -5,20 +5,20 @@
   place-items: center;
 } */
 section > .container-Login {
+  /* border: 1px red solid; */
+  color: white;
   display: grid;
   height: 70vh;
+  margin: auto;
   place-content: center;
   place-items: center;
-  /* border: 1px red solid; */
-  margin: auto;
-  color: white;
 }
 
 .Login-Welcome {
-  font-size: 65px;
-  margin-bottom: 30px;
   color: white;
+  font-size: 65px;
   font-weight: 600;
+  margin-bottom: 30px;
 }
 
 .form-control.Login-input {
