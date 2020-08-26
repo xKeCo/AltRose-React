@@ -58,7 +58,7 @@ export default function Login() {
 
             {user && user.avatar && (
               <div>
-                <Avatar src={user.avatar} alt={user.username} text={user.username} />
+                <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
               </div>
             )}
           </div>
