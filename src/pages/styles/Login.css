@@ -34,7 +34,7 @@ section > .container-Login {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 300px;
+  width: 330px;
   flex-wrap: wrap;
   /* border: 1px solid red; */
   margin: auto;

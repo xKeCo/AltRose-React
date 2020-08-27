@@ -7,7 +7,13 @@ import GoogleButton from "../components/buttons/GoogleButton";
 import GithubIcon from "../components/buttons/icons/GithubIcon";
 import FacebookIcon from "../components/buttons/icons/FacebookIcon";
 import GoogleIcon from "../components/buttons/icons/GoogleIcon";
-import { loginWithGithub, onAuthStateChanged } from "../firebase/client";
+import {
+  LogOut,
+  loginWithFacebook,
+  loginWithGoogle,
+  loginWithGithub,
+  onAuthStateChanged,
+} from "../firebase/client";
 import Avatar from "../components/Avatar";
 
 export default function Login() {
@@ -18,8 +24,23 @@ export default function Login() {
     document.title = "Alt Rose™ - Log In";
   }, []);
 
-  const handleClick = () => {
+  const handleClickGithub = () => {
     loginWithGithub()
+      .then(setUser)
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+  const handleClickFacebook = () => {
+    loginWithFacebook()
+      .then(setUser)
+      .catch((err) => {
+        console.log(err);
+      });
+  };
+
+  const handleClickGoogle = () => {
+    loginWithGoogle()
       .then(setUser)
       .catch((err) => {
         console.log(err);
@@ -56,25 +77,28 @@ export default function Login() {
           <h6> o </h6>
           <div className="Buttons-Container">
             {user === null && (
-              <GithubButton onClick={handleClick}>
+              <GithubButton onClick={handleClickGithub}>
                 <GithubIcon width={36} height={36}></GithubIcon>
               </GithubButton>
             )}
 
             {user === null && (
-              <FacebookButton onClick={handleClick}>
+              <FacebookButton onClick={handleClickFacebook}>
                 <FacebookIcon fill="#fff" width={36} height={36}></FacebookIcon>
               </FacebookButton>
             )}
 
             {user === null && (
-              <GoogleButton onClick={handleClick}>
+              <GoogleButton onClick={handleClickGoogle}>
                 <GoogleIcon width={36} height={36}></GoogleIcon>
               </GoogleButton>
             )}
             {user && user.avatar && (
               <div>
                 <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
+                <button className=" btn-sm mt-3" onClick={LogOut}>
+                  Log Out
+                </button>
               </div>
             )}
           </div>
