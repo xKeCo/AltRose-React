@@ -7,6 +7,7 @@ import GoogleButton from "../components/buttons/GoogleButton";
 import GithubIcon from "../components/buttons/icons/GithubIcon";
 import FacebookIcon from "../components/buttons/icons/FacebookIcon";
 import GoogleIcon from "../components/buttons/icons/GoogleIcon";
+// import { Redirect } from "react-router-dom";
 import {
   LogOut,
   loginWithFacebook,
@@ -111,10 +112,10 @@ export default function Login() {
             {user && user.avatar && (
               <div>
                 <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
-                <Link to="/" className="btn-colorWhite btn btn-sm mr-4">
+                <Link to="/" className="btn-colorWhite btn btn-sm mr-4 ">
                   Volver al inicio
                 </Link>
-                <button className=" btn-sm mt-5" onClick={LogOut}>
+                <button className=" btn-sm mt-4" onClick={LogOut}>
                   Log Out
                 </button>
               </div>

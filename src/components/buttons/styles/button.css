@@ -22,6 +22,7 @@ button:hover {
   padding: 0.45rem 0.5rem;
   transition: opacity 0.2s ease;
   border-radius: 400px;
+  width: 52px;
 }
 
 /* Github Button End*/
@@ -38,6 +39,7 @@ button:hover {
   padding: 0.45rem 0.5rem;
   transition: opacity 0.2s ease;
   border-radius: 100%;
+  width: 52px;
 }
 
 /* Facebook Button End*/
@@ -54,6 +56,7 @@ button:hover {
   padding: 0.45rem 0.5rem;
   transition: opacity 0.2s ease;
   border-radius: 100%;
+  width: 52px;
 }
 
 /* Facebook Button End*/
