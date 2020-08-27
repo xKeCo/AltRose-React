@@ -31,13 +31,16 @@ section > .container-Login {
 
 /* Buttons Container */
 .Buttons-Container {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 330px;
-  flex-wrap: wrap;
   /* border: 1px solid red; */
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   margin: auto;
+  width: 330px;
 }
 
+.btn-colorWhite {
+  color: white;
+}
 /* Buttons Container End */

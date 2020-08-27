@@ -48,5 +48,5 @@ export const loginWithGoogle = () => {
 
 export const LogOut = () => {
   const logOut = firebaseConfig.auth().signOut();
-  // return logOut;
+  return logOut;
 };

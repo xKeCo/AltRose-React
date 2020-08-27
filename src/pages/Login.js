@@ -14,6 +14,7 @@ import {
   loginWithGithub,
   onAuthStateChanged,
 } from "../firebase/client";
+import { Link } from "react-router-dom";
 import Avatar from "../components/Avatar";
 
 export default function Login() {
@@ -54,27 +55,41 @@ export default function Login() {
           <h2 className="Login-Welcome">What's Up?</h2>
           <form className="form-signin">
             <div className="form-group">
-              <label className="sr-only" htmlFor="inputEmail">
-                Email address
-              </label>
-              <input
-                type="email"
-                className="form-control Login-input"
-                placeholder="Email address"
-              />
+              {user === null && (
+                <label className="sr-only" htmlFor="inputEmail">
+                  Email address
+                </label>
+              )}
+              {user === null && (
+                <input
+                  type="email"
+                  className="form-control Login-input"
+                  placeholder="Email address"
+                />
+              )}
             </div>
             <div className="form-group">
-              <label className="sr-only" htmlFor="inputPassWord">
-                PassWord
-              </label>
-              <input type="password" className="form-control Login-input" placeholder="PassWord" />
+              {user === null && (
+                <label className="sr-only" htmlFor="inputPassWord">
+                  PassWord
+                </label>
+              )}
+              {user === null && (
+                <input
+                  type="password"
+                  className="form-control Login-input"
+                  placeholder="PassWord"
+                />
+              )}
             </div>
-            <button type="submit" className="btn btn-danger mb-3">
-              Submit
-            </button>
+            {user === null && (
+              <button type="submit" className="btn btn-danger mb-3">
+                Submit
+              </button>
+            )}
           </form>
 
-          <h6> o </h6>
+          {user === null && <h6> o </h6>}
           <div className="Buttons-Container">
             {user === null && (
               <GithubButton onClick={handleClickGithub}>
@@ -96,7 +111,10 @@ export default function Login() {
             {user && user.avatar && (
               <div>
                 <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
-                <button className=" btn-sm mt-3" onClick={LogOut}>
+                <Link to="/" className="btn-colorWhite btn btn-sm mr-4">
+                  Volver al inicio
+                </Link>
+                <button className=" btn-sm mt-5" onClick={LogOut}>
                   Log Out
                 </button>
               </div>
