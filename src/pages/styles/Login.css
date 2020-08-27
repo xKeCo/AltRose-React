@@ -28,3 +28,16 @@ section > .container-Login {
 .form-signin .form-group {
   margin-bottom: 22px;
 }
+
+/* Buttons Container */
+.Buttons-Container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 300px;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  margin: auto;
+}
+
+/* Buttons Container End */

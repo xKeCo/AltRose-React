@@ -2,7 +2,11 @@ import React, { useState, useEffect } from "react";
 import "./styles/Login.css";
 import "bootstrap/dist/css/bootstrap.css";
 import GithubButton from "../components/buttons/GithubButton";
+import FacebookButton from "../components/buttons/FacebookButton";
+import GoogleButton from "../components/buttons/GoogleButton";
 import GithubIcon from "../components/buttons/icons/GithubIcon";
+import FacebookIcon from "../components/buttons/icons/FacebookIcon";
+import GoogleIcon from "../components/buttons/icons/GoogleIcon";
 import { loginWithGithub, onAuthStateChanged } from "../firebase/client";
 import Avatar from "../components/Avatar";
 
@@ -11,6 +15,7 @@ export default function Login() {
 
   useEffect(() => {
     onAuthStateChanged(setUser);
+    document.title = "Alt Rose™ - Log In";
   }, []);
 
   const handleClick = () => {
@@ -48,14 +53,25 @@ export default function Login() {
             </button>
           </form>
 
-          <div>
+          <h6> o </h6>
+          <div className="Buttons-Container">
             {user === null && (
               <GithubButton onClick={handleClick}>
-                <GithubIcon width={28} height={28}></GithubIcon>
-                Login with GitHub
+                <GithubIcon width={36} height={36}></GithubIcon>
               </GithubButton>
             )}
 
+            {user === null && (
+              <FacebookButton onClick={handleClick}>
+                <FacebookIcon fill="#fff" width={36} height={36}></FacebookIcon>
+              </FacebookButton>
+            )}
+
+            {user === null && (
+              <GoogleButton onClick={handleClick}>
+                <GoogleIcon width={36} height={36}></GoogleIcon>
+              </GoogleButton>
+            )}
             {user && user.avatar && (
               <div>
                 <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />

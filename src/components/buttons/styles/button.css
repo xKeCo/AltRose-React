@@ -1,3 +1,17 @@
+/* Goblal Button */
+
+/* button > svg {
+  margin-right: 8px;
+} */
+
+button:hover {
+  opacity: 0.7;
+}
+
+/* Goblal Button End */
+
+/* Github Button */
+
 .btn.btn-Github {
   align-items: center;
   background-color: white;
@@ -5,14 +19,41 @@
   color: black;
   display: flex;
   font-weight: 600;
-  padding: 0.4rem 1.65rem;
+  padding: 0.45rem 0.5rem;
   transition: opacity 0.2s ease;
+  border-radius: 400px;
 }
 
-button > svg {
-  margin-right: 8px;
+/* Github Button End*/
+
+/* Facebook Button */
+
+.btn.btn-Facebook {
+  align-items: center;
+  background-color: #3b5998;
+  border: none;
+  color: white;
+  display: flex;
+  font-weight: 600;
+  padding: 0.45rem 0.5rem;
+  transition: opacity 0.2s ease;
+  border-radius: 100%;
 }
 
-button:hover {
-  opacity: 0.7;
+/* Facebook Button End*/
+
+/* Facebook Button */
+
+.btn.btn-Google {
+  align-items: center;
+  background-color: white;
+  border: none;
+  color: black;
+  display: flex;
+  font-weight: 600;
+  padding: 0.45rem 0.5rem;
+  transition: opacity 0.2s ease;
+  border-radius: 100%;
 }
+
+/* Facebook Button End*/
