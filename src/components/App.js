@@ -13,8 +13,8 @@ export default function App() {
       <Layout>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/Contacto" component={Contact} />
-          <Route exact path="/Login" component={Login} />
+          <Route exact path="/contacto" component={Contact} />
+          <Route exact path="/login" component={Login} />
           <Route component={NotFound} />
         </Switch>
       </Layout>
