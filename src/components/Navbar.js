@@ -25,7 +25,7 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav ml-auto">
             <li className="nav-item mr-2">
-              <Link to="/" className="nav-link text-light">
+              <Link to="/" className="nav-link text-light active">
                 New Arrivals
               </Link>
             </li>

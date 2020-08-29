@@ -43,4 +43,7 @@ section > .container-Login {
 .btn-colorWhite {
   color: white;
 }
+.btn-colorWhite:hover {
+  color: white;
+}
 /* Buttons Container End */
