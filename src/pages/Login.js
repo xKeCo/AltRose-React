@@ -7,16 +7,16 @@ import GoogleButton from "../components/buttons/GoogleButton";
 import GithubIcon from "../components/buttons/icons/GithubIcon";
 import FacebookIcon from "../components/buttons/icons/FacebookIcon";
 import GoogleIcon from "../components/buttons/icons/GoogleIcon";
-// import { Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import {
-  LogOut,
+  // LogOut,
   loginWithFacebook,
   loginWithGoogle,
   loginWithGithub,
   onAuthStateChanged,
 } from "../firebase/client";
-import { Link } from "react-router-dom";
-import Avatar from "../components/Avatar";
+// import { Link } from "react-router-dom";
+// import Avatar from "../components/Avatar";
 
 export default function Login() {
   const [user, setUser] = useState(undefined);
@@ -48,6 +48,10 @@ export default function Login() {
         console.log(err);
       });
   };
+
+  if (user) {
+    return <Redirect to="/" />;
+  }
 
   return (
     <>
@@ -90,7 +94,7 @@ export default function Login() {
             )}
           </form>
 
-          {user === null && <h6> o </h6>}
+          {user === null && <h6 className="mb-3"> o </h6>}
           <div className="Buttons-Container">
             {user === null && (
               <GithubButton onClick={handleClickGithub}>
@@ -109,7 +113,7 @@ export default function Login() {
                 <GoogleIcon width={36} height={36}></GoogleIcon>
               </GoogleButton>
             )}
-            {user && user.avatar && (
+            {/* {user && user.avatar && (
               <div>
                 <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
                 <Link to="/" className="btn-colorWhite btn btn-sm mr-4 ">
@@ -119,7 +123,7 @@ export default function Login() {
                   Log Out
                 </button>
               </div>
-            )}
+            )} */}
           </div>
         </div>
       </section>

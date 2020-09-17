@@ -61,8 +61,8 @@ export default function Navbar() {
             )}
 
             {user && user.avatar && (
-              <div>
-                <Link to="/Login">
+              <div className="dropdown">
+                <Link to="/" className="text-decoration-none ">
                   <Avatar src={user.avatar} alt={"Avatar"} text={user.username} />
                 </Link>
               </div>
